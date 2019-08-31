@@ -12,16 +12,15 @@
     }
   ],
   "eslint.autoFixOnSave": true,
-  "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.format.defaultFormatter.js": "prettier-eslint",
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": false
   },
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
   "stylusSupremacy.quoteChar": "'",
   "stylusSupremacy.insertColons": false,
   "stylusSupremacy.insertSemicolons": false,
   "stylusSupremacy.sortProperties": "grouped",
-  "stylusSupremacy.insertBraces": false,
-  "prettier.singleQuote": true
+  "stylusSupremacy.insertBraces": false
 }
