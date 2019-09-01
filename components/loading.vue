@@ -1,5 +1,5 @@
 <template>
-  <div class="loading" :class="{ 'is-finish': dataLoadFinish }">
+  <div v-if="loading" class="loading-page">
     <trinity-rings-spinner
       :animation-duration="1500"
       :size="82"
@@ -14,21 +14,22 @@ export default {
   components: {
     TrinityRingsSpinner
   },
-  data() {
-    return {
-      dataLoadFinish: false
+  data: () => ({
+    loading: false
+  }),
+  methods: {
+    start() {
+      this.loading = true
+    },
+    finish() {
+      this.loading = false
     }
-  },
-  mounted() {
-    window.addEventListener('load', () => {
-      this.dataLoadFinish = true
-    })
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.loading
+.loading-page
   position fixed
   z-index 3
   display flex
@@ -37,9 +38,4 @@ export default {
   width 100vw
   height 100vh
   background-color #fff
-
-  &.is-finish
-    z-index -1
-    opacity 0
-    transition opacity 0.5s, z-index 0s 0.51s
 </style>

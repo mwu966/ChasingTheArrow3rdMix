@@ -1,26 +1,20 @@
 <template>
-  <div>
-    <FirstLoading />
-    <div class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <h1 class="test-style">
-              {{ name }}
-            </h1>
-          </div>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h1 class="test-style">
+            {{ name }}
+          </h1>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import FirstLoading from '~/components/first-loading.vue'
 export default {
-  components: {
-    FirstLoading
-  },
+  components: {},
   data() {
     return {
       name: 'てすとてすと'
