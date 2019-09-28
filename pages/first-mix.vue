@@ -5,10 +5,7 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-            <h1 class="test-style">
-              {{ name }}
-              <nuxt-link to="/first-mix">1st</nuxt-link>
-            </h1>
+            aaa
           </div>
         </div>
       </div>
@@ -20,16 +17,14 @@
 import NavMenu from '~/components/NavMenu.vue'
 export default {
   components: { NavMenu },
-  data() {
-    return {
-      name: 'てすとてすと'
-    }
+  asyncData() {
+    return new Promise(resolve => {
+      setTimeout(function() {
+        resolve({})
+      }, 1000)
+    })
   }
 }
 </script>
 
-<style lang="stylus">
-.test-style
-  color #000
-  font-size 50px
-</style>
+<style lang="stylus"></style>
