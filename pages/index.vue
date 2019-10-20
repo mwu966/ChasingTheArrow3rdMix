@@ -1,42 +1,30 @@
 <template>
-  <div class="container">
+  <div>
     <nav-menu />
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <h1 class="test-style">
-              {{ name }}
-              <nuxt-link to="/first-mix">1st</nuxt-link>
-              <div v-html="mark" />
-            </h1>
-          </div>
-        </div>
-      </div>
-    </section>
+    <about :content="about" />
+    <info :content="info" />
   </div>
 </template>
 
 <script>
 import NavMenu from '~/components/NavMenu.vue'
+import About from '~/components/about.vue'
+import Info from '~/components/info.vue'
 import marked from 'marked'
 export default {
-  components: { NavMenu },
+  components: { NavMenu, About, Info },
   data() {
     return {
-      name: 'てすとてすと',
-      mark: ''
+      about: '',
+      info: ''
     }
   },
   async asyncData({ app }) {
-    const response = await app.$axios.$get('content/test.md')
-    return { mark: marked(response) }
+    const about = await app.$axios.$get('content/about.md')
+    const info = await app.$axios.$get('content/info.md')
+    return { about: marked(about), info: marked(info) }
   }
 }
 </script>
 
-<style lang="stylus">
-.test-style
-  color #000
-  font-size 50px
-</style>
+<style lang="stylus"></style>
