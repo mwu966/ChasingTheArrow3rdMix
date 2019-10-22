@@ -1,6 +1,8 @@
 <template>
   <section class="section">
-    <div class="container" v-html="content" />
+    <div class="container">
+      <div class="content" v-html="content" />
+    </div>
   </section>
 </template>
 
