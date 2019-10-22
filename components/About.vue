@@ -10,4 +10,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+/deep/ h1, /deep/ p
+  font-family 'Josefin Sans', sans-serif
+</style>

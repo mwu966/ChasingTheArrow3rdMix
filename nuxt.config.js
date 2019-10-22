@@ -1,3 +1,4 @@
+require('dotenv').config()
 export default {
   mode: 'spa',
   /*
@@ -38,9 +39,16 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-webfontloader',
+    '@nuxtjs/dotenv'
   ],
   axios: {
+  },
+  webfontloader: {
+    google: {
+      families: ['Josefin+Sans']
+    }
   },
   /*
    ** Build configuration
