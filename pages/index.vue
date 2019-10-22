@@ -3,16 +3,18 @@
     <nav-menu />
     <about :content="about" />
     <info :content="info" />
+    <foot />
   </div>
 </template>
 
 <script>
 import NavMenu from '~/components/NavMenu.vue'
-import About from '~/components/about.vue'
-import Info from '~/components/info.vue'
+import About from '~/components/About.vue'
+import Info from '~/components/Info.vue'
+import Foot from '~/components/Footer.vue'
 import marked from 'marked'
 export default {
-  components: { NavMenu, About, Info },
+  components: { NavMenu, About, Info, Foot },
   data() {
     return {
       about: '',
