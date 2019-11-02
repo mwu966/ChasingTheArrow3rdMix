@@ -46,7 +46,7 @@ export default {
   height 300px
   border solid 1px #000
   border-radius 50%
-  transform perspective(550px) rotateX(65deg)
+  transform perspective(550px) rotateX(50deg)
 
 .members-bg-img
   width 100%
