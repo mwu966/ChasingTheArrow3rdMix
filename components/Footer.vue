@@ -81,4 +81,14 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+@keyframes show
+  from
+    opacity 0
+
+  to
+    opacity 1
+
+.is-active
+  animation show 0.1s linear 0s
+</style>
