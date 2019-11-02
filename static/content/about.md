@@ -6,7 +6,7 @@
 
 あいうえお abcdefghijk[リンクテスト](https://www.google.co.jp/)
 
-かきくけこ DDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDRDDR
+かきくけこ DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR
 
 **さしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそ**
 
