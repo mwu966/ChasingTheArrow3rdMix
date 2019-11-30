@@ -1,25 +1,26 @@
+require('dotenv').config()
 export default {
-  mode: "spa",
+  mode: 'spa',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: process.env.npm_package_name || '',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: "description",
-        name: "description",
-        content: process.env.npm_package_description || ""
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: '~/components/Loading.vue',
   /*
    ** Global CSS
    */
@@ -29,16 +30,26 @@ export default {
    */
   plugins: [],
   /*
-   ** Nuxt.js dev-modules
+   ** Nuxt.js build-modules
    */
-  devModules: [],
+  buildModules: [],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    "@nuxtjs/bulma"
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios',
+    'nuxt-webfontloader',
+    '@nuxtjs/dotenv'
   ],
+  axios: {
+  },
+  webfontloader: {
+    google: {
+      families: ['Josefin+Sans']
+    }
+  },
   /*
    ** Build configuration
    */
@@ -53,12 +64,12 @@ export default {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: "pre",
+          enforce: 'pre',
           test: /\.(js|vue)$/,
-          loader: "eslint-loader",
+          loader: 'eslint-loader',
           exclude: /(node_modules)/
-        });
+        })
       }
     }
   }
-};
+}

@@ -1,72 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        ChasingTheArrow3rdMix
-      </h1>
-      <h2 class="subtitle">
-        
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <nav-menu />
+    <about :content="about" />
+    <info :content="info" />
+    <foot />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import NavMenu from '~/components/NavMenu.vue'
+import About from '~/components/About.vue'
+import Info from '~/components/Info.vue'
+import Foot from '~/components/Footer.vue'
+import marked from 'marked'
 export default {
-  components: {
-    Logo
+  components: { NavMenu, About, Info, Foot },
+  data() {
+    return {
+      about: '',
+      info: ''
+    }
+  },
+  async asyncData({ app }) {
+    const about = await app.$axios.$get('content/about.md')
+    const info = await app.$axios.$get('content/info.md')
+    return { about: marked(about), info: marked(info) }
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style lang="stylus"></style>
