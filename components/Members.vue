@@ -1,9 +1,14 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="test">
-        <div v-for="n of 24" :key="n" class="member-list">
-          <member />
+      <div class="members-container">
+        <div
+          v-for="(member, index) in content.members"
+          :key="index"
+          class="member"
+          :class="['hoge-' + index]"
+        >
+          <member :content="member" />
         </div>
       </div>
     </div>
@@ -13,17 +18,18 @@
 <script>
 import Member from '~/components/Member.vue'
 export default {
-  components: { Member }
+  components: { Member },
+  props: ['content']
 }
 </script>
 
 <style lang="stylus" scoped>
-.test
+.members-container
   display flex
   flex-direction row
   overflow-x scroll
   overflow-y hidden
 
-.member-list
+.member
   margin auto -200px auto auto
 </style>

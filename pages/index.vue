@@ -2,7 +2,7 @@
   <div>
     <nav-menu />
     <about :content="about" />
-    <members />
+    <members :content="members" />
     <info :content="info" />
     <foot />
   </div>
@@ -20,13 +20,19 @@ export default {
   data() {
     return {
       about: '',
-      info: ''
+      info: '',
+      members: ''
     }
   },
   async asyncData({ app }) {
     const about = await app.$axios.$get('content/about.md')
     const info = await app.$axios.$get('content/info.md')
-    return { about: marked(about), info: marked(info) }
+    const members = await app.$axios.$get('content/members.json')
+    return {
+      about: marked(about),
+      info: marked(info),
+      members: members
+    }
   }
 }
 </script>

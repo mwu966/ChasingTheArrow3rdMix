@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  props: ['content'],
   methods: {
     openMemberImage(name) {
       document.getElementById(name).classList.add('is-active')
@@ -68,7 +69,6 @@ export default {
   border-radius 50%
   background-color #fff
   transform translate(-50%, -50%)
-  -webkit-transform translate(-50%, -50%)
 
 @keyframes rotate-anime
   0%
