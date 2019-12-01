@@ -86,4 +86,7 @@ export default {
 
 .is-active
   animation show 0.1s linear 0s
+
+.footer
+  background none
 </style>

@@ -26,4 +26,7 @@ export default {
   flex-direction row
   overflow-x scroll
   overflow-y hidden
+
+.section
+  padding 1rem 1.5rem
 </style>

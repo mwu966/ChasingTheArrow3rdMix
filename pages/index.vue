@@ -38,4 +38,5 @@ export default {
 <style lang="stylus">
 body
   font-family 'Gentium Book Basic', 'Kosugi', sans-serif
+  background-image: linear-gradient(135deg, #a79756, #faf8c5, #a79756)
 </style>
