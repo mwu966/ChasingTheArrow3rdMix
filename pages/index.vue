@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav-menu />
-    <about :content="about" />
-    <members :content="members" />
-    <info :content="info" />
+    <about id="about" :content="about" />
+    <members id="members" :content="members" />
+    <info id="info" :content="info" />
     <foot />
   </div>
 </template>
@@ -35,4 +35,7 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+body
+  font-family 'Gentium Book Basic', 'Kosugi', sans-serif
+</style>

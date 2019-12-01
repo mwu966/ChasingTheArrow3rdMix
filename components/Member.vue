@@ -1,20 +1,19 @@
 <template>
   <div>
+    <span>{{ content.member.writerName }}</span>
+    <span>{{ content.member.circleName }}</span>
     <div
       class="members-bg"
       :class="{
         'members-right-margin': content.index + 1 == content.membersCount
       }"
-      @click="openMemberImage('book-image-' + content.member.twitterId)"
+      @click="isOpen = true"
     >
       <div class="members-bg-img"></div>
       <div class="members-bg-center"></div>
     </div>
-    <div class="modal" :id="'book-image-' + content.member.twitterId">
-      <div
-        class="modal-background"
-        @click="closeMemberImage('book-image-' + content.member.twitterId)"
-      ></div>
+    <div class="modal" :class="{ 'is-active': isOpen }">
+      <div class="modal-background" @click="isOpen = false"></div>
       <div class="modal-content">
         <p class="image">
           <img src="~assets/img/Colloid-2nd.png" alt="" />
@@ -23,23 +22,51 @@
       <button
         class="modal-close is-large"
         aria-label="close"
-        @click="closeMemberImage('book-image-' + content.member.twitterId)"
+        @click="isOpen = false"
       ></button>
     </div>
+    <span>{{
+      content.member.playStyle1 +
+        '&nbsp;' +
+        content.member.musicName1 +
+        '&nbsp;' +
+        content.member.kanjiLevel1 +
+        '&nbsp;' +
+        content.member.difficultyLevel1
+    }}</span>
+    <span>{{
+      content.member.playStyle2 +
+        '&nbsp;' +
+        content.member.musicName2 +
+        '&nbsp;' +
+        content.member.kanjiLevel2 +
+        '&nbsp;' +
+        content.member.difficultyLevel2
+    }}</span>
+    <a :href="'https://twitter.com/' + content.member.twitterId">
+      <img src="~assets/sns_icon/twitter.png" alt="Twitter" />
+    </a>
+    <a
+      :href="'https://www.pixiv.net/member.php?id=' + content.member.pixivId"
+      v-if="content.member.pixivId != ''"
+    >
+      <img src="~assets/sns_icon/pixiv.png" alt="Pixiv" />
+    </a>
+    <a :href="content.member.blogUrl" v-if="content.member.blogUrl != ''">
+      <img src="~assets/sns_icon/hatena_blog.png" alt="はてなブログ" />
+    </a>
+    <a :href="content.member.webUrl" v-if="content.member.webUrl != ''">
+      Web
+    </a>
   </div>
 </template>
 
 <script>
 export default {
   props: ['content'],
-  methods: {
-    openMemberImage(name) {
-      document.getElementById(name).classList.add('is-active')
-    },
-    closeMemberImage(name) {
-      document.getElementById(name).classList.remove('is-active')
-    }
-  }
+  data: () => ({
+    isOpen: false
+  })
 }
 </script>
 
@@ -49,15 +76,17 @@ export default {
 
 .members-bg
   position relative
-  margin auto 20px
-  width 300px
-  height 300px
+  margin auto 3vw
+  max-width 60vh
+  max-height 60vh
+  width 70vw
+  height 70vw
   border solid 1px #000
   border-radius 50%
   transform perspective(550px) rotateX(50deg)
 
 .members-right-margin
-  margin-right 150px
+  margin-right 30vw
 
 .members-bg-img
   width 100%
@@ -65,6 +94,7 @@ export default {
   border-radius 50%
   background-image url('~assets/img/Colloid-2nd.png')
   background-position center center
+  background-size 350%
   background-repeat no-repeat
   animation rotate-anime 30s linear infinite
 
@@ -75,7 +105,7 @@ export default {
   align-items center
   width 25%
   height 25%
-  border solid 18px #333
+  border solid 3vh #333
   border-radius 50%
   background-color #fff
   transform translate(-50%, -50%)

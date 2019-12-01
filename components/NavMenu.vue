@@ -1,20 +1,18 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav
+    class="navbar is-fixed-top"
+    role="navigation"
+    aria-label="main navigation"
+  >
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img
-          src="https://bulma.io/images/bulma-logo.png"
-          width="112"
-          height="28"
-        />
-      </a>
-
       <a
         role="button"
         class="navbar-burger burger"
         aria-label="menu"
         aria-expanded="false"
         data-target="navbarBasicExample"
+        @click="isOpen = !isOpen"
+        :class="{ 'is-active': isOpen }"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -22,48 +20,34 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div
+      id="navbarBasicExample"
+      class="navbar-menu"
+      :class="{ 'is-active': isOpen }"
+    >
       <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-
-        <a class="navbar-item">
-          Documentation
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider" />
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
+        <nuxt-link class="navbar-item" v-scroll-to="'#about'" to
+          >About</nuxt-link
+        >
+        <nuxt-link class="navbar-item" v-scroll-to="'#members'" to
+          >Members</nuxt-link
+        >
+        <nuxt-link class="navbar-item" v-scroll-to="'#info'" to>Info</nuxt-link>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
+            <a
+              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+              class="twitter-share-button"
+              data-show-count="false"
+              >Tweet</a
+            ><script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
           </div>
         </div>
       </div>
@@ -73,16 +57,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      name: 'てすとてすと'
-    }
-  }
+  data: () => ({
+    isOpen: false
+  })
 }
 </script>
-
-<style lang="stylus" scoped>
-.test-style
-  color #000
-  font-size 50px
-</style>

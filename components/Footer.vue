@@ -1,14 +1,14 @@
 <template>
   <footer class="footer">
-    <div class="modal" id="privacy-policy">
-      <div class="modal-background" @click="closePrivacyPolicy"></div>
+    <div class="modal" id="privacy-policy" :class="{ 'is-active': isOpen }">
+      <div class="modal-background" @click="isOpen = false"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">プライバシーポリシー</p>
           <button
             class="delete"
             aria-label="close"
-            @click="closePrivacyPolicy"
+            @click="isOpen = false"
           ></button>
         </header>
         <section class="modal-card-body">
@@ -57,27 +57,22 @@
           </div>
         </section>
         <footer class="modal-card-foot">
-          <button class="button" @click="closePrivacyPolicy">Close</button>
+          <button class="button" @click="isOpen = false">Close</button>
         </footer>
       </div>
     </div>
     <div class="content has-text-centered">
       <p>&copy; 2019 ミルク蒼屋</p>
-      <a @click="openPrivacyPolicy">プライバシポリシー</a>
+      <a @click="isOpen = true">プライバシポリシー</a>
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-  methods: {
-    openPrivacyPolicy() {
-      document.getElementById('privacy-policy').classList.add('is-active')
-    },
-    closePrivacyPolicy() {
-      document.getElementById('privacy-policy').classList.remove('is-active')
-    }
-  }
+  data: () => ({
+    isOpen: false
+  })
 }
 </script>
 

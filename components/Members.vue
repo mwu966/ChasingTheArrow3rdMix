@@ -2,11 +2,7 @@
   <section class="section">
     <div class="container">
       <div class="members-container">
-        <div
-          v-for="(member, index) in content.members"
-          :key="index"
-          :class="['hoge-' + index]"
-        >
+        <div v-for="(member, index) in content.members" :key="index">
           <member
             :content="{ member, index, membersCount: content.members.length }"
           />
