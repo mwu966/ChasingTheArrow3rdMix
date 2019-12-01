@@ -5,10 +5,11 @@
         <div
           v-for="(member, index) in content.members"
           :key="index"
-          class="member"
           :class="['hoge-' + index]"
         >
-          <member :content="member" />
+          <member
+            :content="{ member, index, membersCount: content.members.length }"
+          />
         </div>
       </div>
     </div>
@@ -29,7 +30,4 @@ export default {
   flex-direction row
   overflow-x scroll
   overflow-y hidden
-
-.member
-  margin auto -200px auto auto
 </style>

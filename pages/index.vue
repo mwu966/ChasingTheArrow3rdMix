@@ -17,13 +17,11 @@ import Foot from '~/components/Footer.vue'
 import marked from 'marked'
 export default {
   components: { NavMenu, About, Members, Info, Foot },
-  data() {
-    return {
-      about: '',
-      info: '',
-      members: ''
-    }
-  },
+  data: () => ({
+    about: '',
+    info: '',
+    members: ''
+  }),
   async asyncData({ app }) {
     const about = await app.$axios.$get('content/about.md')
     const info = await app.$axios.$get('content/info.md')

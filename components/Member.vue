@@ -1,13 +1,19 @@
 <template>
   <div>
-    <div class="members-bg" @click="openMemberImage('book-image-colloid')">
+    <div
+      class="members-bg"
+      :class="{
+        'members-right-margin': content.index + 1 == content.membersCount
+      }"
+      @click="openMemberImage('book-image-' + content.member.twitterId)"
+    >
       <div class="members-bg-img"></div>
       <div class="members-bg-center"></div>
     </div>
-    <div id="book-image-colloid" class="modal">
+    <div class="modal" :id="'book-image-' + content.member.twitterId">
       <div
         class="modal-background"
-        @click="closeMemberImage('book-image-colloid')"
+        @click="closeMemberImage('book-image-' + content.member.twitterId)"
       ></div>
       <div class="modal-content">
         <p class="image">
@@ -17,7 +23,7 @@
       <button
         class="modal-close is-large"
         aria-label="close"
-        @click="closeMemberImage('book-image-colloid')"
+        @click="closeMemberImage('book-image-' + content.member.twitterId)"
       ></button>
     </div>
   </div>
@@ -43,11 +49,15 @@ export default {
 
 .members-bg
   position relative
+  margin auto 20px
   width 300px
   height 300px
   border solid 1px #000
   border-radius 50%
   transform perspective(550px) rotateX(50deg)
+
+.members-right-margin
+  margin-right 150px
 
 .members-bg-img
   width 100%
@@ -56,7 +66,7 @@ export default {
   background-image url('~assets/img/Colloid-2nd.png')
   background-position center center
   background-repeat no-repeat
-  animation rotate-anime 12s linear infinite
+  animation rotate-anime 30s linear infinite
 
 .members-bg-center
   position absolute
