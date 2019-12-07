@@ -1,12 +1,6 @@
 <template>
   <div>
-    <div
-      class="members-bg"
-      :class="{
-        'members-right-margin': content.index + 1 == content.membersCount
-      }"
-      @click="isOpen = true"
-    >
+    <div class="members-bg" @click="isOpen = true">
       <div class="members-bg-img"></div>
       <div class="members-bg-center"></div>
     </div>
@@ -85,26 +79,15 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.modal
-  transform translate3d(0px, 0px, 200px)
-
 .members-bg
-  position relative
-  margin auto 3vw
-  max-width 60vh
-  max-height 60vh
-  width 70vw
-  height 70vw
+  width 100%
+  height 100%
   border solid 1px #000
   border-radius 50%
   cursor pointer
-  transform perspective(550px) rotateX(50deg)
 
 .members-bg:hover
   box-shadow 0px 3px 3px rgba(0, 0, 0, 0.4)
-
-.members-right-margin
-  margin-right 30vw
 
 .members-bg-img
   width 100%
@@ -121,9 +104,9 @@ export default {
   top 50%
   left 50%
   align-items center
-  width 25%
-  height 25%
-  border solid 3vh #333
+  width 10vmin
+  height 10vmin
+  border solid 2vmin #333
   border-radius 50%
   background-color #fff
   transform translate(-50%, -50%)

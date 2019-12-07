@@ -30,7 +30,7 @@
           >About</nuxt-link
         >
         <nuxt-link class="navbar-item" v-scroll-to="'#members'" to
-          >Members</nuxt-link
+          >Dancer List</nuxt-link
         >
         <nuxt-link class="navbar-item" v-scroll-to="'#info'" to>Info</nuxt-link>
       </div>
