@@ -22,7 +22,8 @@
     "nuxt-webfontloader": "^1.1.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
-    "vue-scrollto": "^2.17.1"
+    "vue-scrollto": "^2.17.1",
+    "vue2-touch-events": "^2.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

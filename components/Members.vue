@@ -1,16 +1,12 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="members-container">
-        <div
-          class="arrow left"
-          @click="
-            activeIndex == 0
-              ? (activeIndex = content.members.length - 1)
-              : activeIndex--;
-            dancerChangeDirection = true;
-          "
-        ></div>
+      <div
+        class="members-container"
+        v-touch:swipe.left="toLeft"
+        v-touch:swipe.right="toRight"
+      >
+        <div class="arrow left" @click="toLeft()"></div>
         <transition-group
           class="member-container"
           tag="div"
@@ -24,15 +20,7 @@
             :content="{ member }"
           />
         </transition-group>
-        <div
-          class="arrow right"
-          @click="
-            activeIndex == content.members.length - 1
-              ? (activeIndex = 0)
-              : activeIndex++;
-            dancerChangeDirection = false;
-          "
-        ></div>
+        <div class="arrow right" @click="toRight()"></div>
       </div>
     </div>
   </section>
@@ -46,7 +34,21 @@ export default {
   data: () => ({
     activeIndex: 0,
     dancerChangeDirection: true
-  })
+  }),
+  methods: {
+    toLeft: function() {
+      this.activeIndex == 0
+        ? (this.activeIndex = this.content.members.length - 1)
+        : this.activeIndex--
+      this.dancerChangeDirection = true
+    },
+    toRight: function() {
+      this.activeIndex == this.content.members.length - 1
+        ? (this.activeIndex = 0)
+        : this.activeIndex++
+      this.dancerChangeDirection = false
+    }
+  }
 }
 </script>
 

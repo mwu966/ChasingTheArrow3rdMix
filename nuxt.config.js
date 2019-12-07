@@ -31,7 +31,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-scrollto'],
+  plugins: ['~plugins/vue-scrollto', '~plugins/vue2-touch-events'],
   /*
    ** Nuxt.js build-modules
    */
