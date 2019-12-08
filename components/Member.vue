@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="members-bg" @click="isOpen = true">
+    <div class="members-bg" @click="modalOpen">
       <div
         class="members-bg-img"
         :style="{
@@ -15,7 +15,7 @@
     <div class="writer-name">{{ content.member.writerName }}</div>
     <div class="circle-name">{{ content.member.circleName }}</div>
     <div class="modal" :class="{ 'is-active': isOpen }">
-      <div class="modal-background" @click="isOpen = false"></div>
+      <div class="modal-background" @click="modalClose"></div>
       <div class="modal-content">
         <div class="modal-writer-name">
           {{ content.member.writerName }}
@@ -78,7 +78,7 @@
       <button
         class="modal-close is-large"
         aria-label="close"
-        @click="isOpen = false"
+        @click="modalClose"
       ></button>
     </div>
   </div>
@@ -89,7 +89,17 @@ export default {
   props: ['content'],
   data: () => ({
     isOpen: false
-  })
+  }),
+  methods: {
+    modalOpen() {
+      document.getElementsByTagName('html')[0].classList.add('is-clipped')
+      this.isOpen = true
+    },
+    modalClose() {
+      document.getElementsByTagName('html')[0].classList.remove('is-clipped')
+      this.isOpen = false
+    }
+  }
 }
 </script>
 
