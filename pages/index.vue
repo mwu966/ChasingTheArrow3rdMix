@@ -2,6 +2,7 @@
   <div>
     <loading />
     <nav-menu />
+    <top id="top" />
     <about id="about" :content="about" />
     <members id="members" :content="members" />
     <info id="info" :content="info" />
@@ -11,6 +12,7 @@
 
 <script>
 import Loading from '~/components/Loading.vue'
+import Top from '~/components/Top.vue'
 import NavMenu from '~/components/NavMenu.vue'
 import About from '~/components/About.vue'
 import Members from '~/components/Members.vue'
@@ -18,7 +20,7 @@ import Info from '~/components/Info.vue'
 import Foot from '~/components/Footer.vue'
 import marked from 'marked'
 export default {
-  components: { Loading, NavMenu, About, Members, Info, Foot },
+  components: { Loading, Top, NavMenu, About, Members, Info, Foot },
   data: () => ({
     about: '',
     info: '',

@@ -22,13 +22,18 @@
 
     <div id="navMenu" class="navbar-menu" :class="{ 'is-active': isOpen }">
       <div class="navbar-start">
-        <nuxt-link class="navbar-item" v-scroll-to="'#about'" to
-          >About</nuxt-link
-        >
-        <nuxt-link class="navbar-item" v-scroll-to="'#members'" to
-          >Dancer List</nuxt-link
-        >
-        <nuxt-link class="navbar-item" v-scroll-to="'#info'" to>Info</nuxt-link>
+        <nuxt-link class="navbar-item" v-scroll-to="'#top'" to>
+          Top
+        </nuxt-link>
+        <nuxt-link class="navbar-item" v-scroll-to="'#about'" to>
+          About
+        </nuxt-link>
+        <nuxt-link class="navbar-item" v-scroll-to="'#members'" to>
+          Dancer List
+        </nuxt-link>
+        <nuxt-link class="navbar-item" v-scroll-to="'#info'" to>
+          Info
+        </nuxt-link>
       </div>
 
       <div class="navbar-end">
