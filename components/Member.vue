@@ -60,7 +60,7 @@
             <img src="~assets/sns_icon/hatena_blog.png" alt="はてなブログ" />
           </a>
           <a :href="content.member.webUrl" v-if="content.member.webUrl != ''">
-            Web
+            <img src="~assets/sns_icon/web.svg" alt="Webサイト" />
           </a>
         </div>
       </div>
@@ -153,4 +153,8 @@ export default {
 
   a
     margin 1em
+
+    img
+      width 40px
+      height 40px
 </style>
