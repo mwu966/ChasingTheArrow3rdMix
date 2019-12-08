@@ -10,7 +10,7 @@
         class="navbar-burger burger"
         aria-label="menu"
         aria-expanded="false"
-        data-target="navbarBasicExample"
+        data-target="navMenu"
         @click="isOpen = !isOpen"
         :class="{ 'is-active': isOpen }"
       >
@@ -20,11 +20,7 @@
       </a>
     </div>
 
-    <div
-      id="navbarBasicExample"
-      class="navbar-menu"
-      :class="{ 'is-active': isOpen }"
-    >
+    <div id="navMenu" class="navbar-menu" :class="{ 'is-active': isOpen }">
       <div class="navbar-start">
         <nuxt-link class="navbar-item" v-scroll-to="'#about'" to
           >About</nuxt-link
@@ -63,4 +59,11 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.navbar, .navbar-menu
+  border-bottom solid 1px rgba(0, 0, 0, 0.25)
+  background-image linear-gradient(135deg, #a79756, #faf8c5, #a79756)
+
+.navbar-item:focus
+  background rgba(0, 0, 0, 0.1)
+</style>

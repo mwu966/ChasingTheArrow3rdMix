@@ -58,6 +58,7 @@ export default {
   justify-content center
 
 .arrow
+  max-width 15vh
   width 15vw
   background-position center center
   background-repeat no-repeat

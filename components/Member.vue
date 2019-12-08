@@ -64,8 +64,8 @@
         @click="isOpen = false"
       ></button>
     </div>
-    <div>{{ content.member.writerName }}</div>
-    <div>{{ content.member.circleName }}</div>
+    <div class="writer-name">{{ content.member.writerName }}</div>
+    <div class="circle-name">{{ content.member.circleName }}</div>
   </div>
 </template>
 
@@ -97,7 +97,7 @@ export default {
   background-position center center
   background-size 350%
   background-repeat no-repeat
-  animation rotate-anime 75s linear infinite
+  animation rotate-anime 10s linear infinite
 
 .members-bg-center
   position absolute
@@ -117,6 +117,18 @@ export default {
 
   100%
     transform rotate(360deg)
+
+.writer-name
+  margin 0.5rem 0
+  text-align center
+  white-space nowrap
+  font-size 1.8rem
+
+.circle-name
+  margin 0.5rem 0
+  text-align center
+  white-space nowrap
+  font-size 1.2rem
 
 .modal-writer-name
   color #fff
