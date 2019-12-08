@@ -1,7 +1,15 @@
 <template>
   <div>
     <div class="members-bg" @click="isOpen = true">
-      <div class="members-bg-img"></div>
+      <div
+        class="members-bg-img"
+        :style="{
+          backgroundImage:
+            'url(' +
+            require('~/assets/img/members/' + content.member.imgName) +
+            ')'
+        }"
+      ></div>
       <div class="members-bg-center"></div>
     </div>
     <div class="writer-name">{{ content.member.writerName }}</div>
@@ -16,7 +24,10 @@
           {{ content.member.circleName }}
         </div>
         <p class="image">
-          <img src="~assets/img/Colloid-2nd.png" alt="" />
+          <img
+            :src="require('~/assets/img/members/' + content.member.imgName)"
+            :alt="content.member.writerName"
+          />
         </p>
         <div class="music">
           {{
@@ -98,7 +109,6 @@ export default {
   width 100%
   height 100%
   border-radius 50%
-  background-image url('~assets/img/Colloid-2nd.png')
   background-position center center
   background-size 350%
   background-repeat no-repeat

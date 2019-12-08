@@ -6,7 +6,7 @@
       </h1>
       <div class="columns">
         <div class="column is-two-fifths">
-          <img src="~assets/img/hyoushiC97.png" alt="" />
+          <img src="~assets/img/coverC97.png" alt="" />
         </div>
         <div class="column">
           <div class="content" v-html="content" />
