@@ -1,6 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
+      <h2 class="index">
+        <span>Dancer List</span>
+      </h2>
       <div
         class="members-container"
         v-touch:swipe.left="toLeft"
