@@ -1,9 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="index">
-        <span>Dancer List</span>
-      </h2>
+      <h1 class="index">
+        <span>Dancers</span>
+      </h1>
       <div
         class="members-container"
         v-touch:swipe.left="toLeft"
@@ -59,7 +59,7 @@ export default {
 .members-container
   display flex
   justify-content center
-  margin-bottom 10vh
+  margin 5vh auto 10vh auto
 
 .arrow
   max-width 15vh

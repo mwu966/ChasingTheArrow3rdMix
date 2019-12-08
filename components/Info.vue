@@ -1,9 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="index">
-        <span>頒布情報</span>
-      </h2>
+      <h1 class="index">
+        <span>Information</span>
+      </h1>
       <div class="columns">
         <div class="column is-two-fifths">
           <img src="~assets/img/hyoushiC97.png" alt="" />

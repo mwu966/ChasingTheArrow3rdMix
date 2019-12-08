@@ -1,6 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
+      <h1 class="index">
+        <span>About this book</span>
+      </h1>
       <div class="content" v-html="content" />
     </div>
   </section>

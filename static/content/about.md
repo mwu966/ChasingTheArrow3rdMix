@@ -1,5 +1,3 @@
-# About this Book -この合同誌について-
-
 あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About
 
 ## 見出し見出し
