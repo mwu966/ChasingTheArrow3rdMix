@@ -5,7 +5,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Chasing The Arrow 3rd Mix',
+    title: 'Chasing the Arrow -Dance Dance Revolution 譜面紹介合同 3rdMix- 特設サイト',
     htmlAttrs: {
       class: 'has-navbar-fixed-top'
     },
