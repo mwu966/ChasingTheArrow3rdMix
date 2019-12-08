@@ -74,7 +74,7 @@ html
   background-image linear-gradient(135deg, #a79756, #faf8c5, #a79756)
 
 body
-  font-family 'Gentium Book Basic', 'Kosugi', sans-serif
+  font-family 'Gentium Book Basic', 'Sawarabi Gothic', sans-serif
 
 .index
   margin-bottom 0.8rem

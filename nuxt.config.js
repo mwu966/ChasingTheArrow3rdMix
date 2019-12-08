@@ -57,7 +57,7 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Gentium+Book+Basic','Kosugi']
+      families: ['Gentium+Book+Basic','Sawarabi+Gothic']
     }
   },
   /*

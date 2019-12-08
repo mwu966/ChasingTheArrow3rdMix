@@ -15,4 +15,12 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+/deep/ p
+  font-size 1.6em
+  line-height 3rem
+
+  strong
+    font-size 2.2rem
+    line-height 3.6rem
+</style>

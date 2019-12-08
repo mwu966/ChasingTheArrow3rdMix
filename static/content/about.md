@@ -1,13 +1,7 @@
-あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About あばうとアバウト About
+いろんなプレイ・踏み方がある  
+２０年目を迎えた Dance Dance Revolution というアーケードダンスゲーム
 
-## 見出し見出し
+そんなプレイスタイル・踏み方にフォーカスしていろんな踏み方を見てみたい！  
+そんな気持ちで DDR 譜面紹介合同を企画
 
-あいうえお abcdefghijk[リンクテスト](https://www.google.co.jp/)
-
-かきくけこ DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR DDR
-
-**さしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそさしすせそ**
-
-ああああああああいいいいいいいいいいううううううううううううえええええええ
-
-主催 ミルク蒼屋/Colloid
+**この合同誌はそんな企画にのった 24 人の DDRer が自分たちの紹介したい譜面を紙媒体で紹介する合同誌である！**

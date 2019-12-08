@@ -63,7 +63,12 @@
     </div>
     <div class="content has-text-centered">
       <p>&copy; 2019 ミルク蒼屋</p>
-      <a @click="isOpen = true">プライバシポリシー</a>
+      <p class="notice">
+        当合同誌は&#12849;コナミアミューズメント様制作の Dance Dance Revolution
+        の二次創作、ファン有志による作品です。
+        公式・企業とは一切関係ありません。<br />
+        <a @click="isOpen = true">プライバシポリシー </a>
+      </p>
     </div>
   </footer>
 </template>
@@ -90,4 +95,7 @@ export default {
 .footer
   border-top solid 1px rgba(0, 0, 0, 0.25)
   background none
+
+.notice
+  font-size 0.8rem
 </style>
