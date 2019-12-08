@@ -18,4 +18,12 @@
     background-position bottom 5vh center, top 10vh left -30vw, top 10vh right -25vw
     background-size 80vmin, 90%, 65%
     background-repeat no-repeat
+    animation fadein 1.5s linear 1.5s
+
+@keyframes fadein
+  from
+    opacity 0
+
+  to
+    opacity 1
 </style>
