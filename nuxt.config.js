@@ -18,6 +18,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
+    script: [
+      {
+        charset: 'utf-8',
+        src:
+          'https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver,IntersectionObserverEntry'
+      }
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
@@ -31,7 +38,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-scrollto', '~plugins/vue2-touch-events'],
+  plugins: ['~plugins/vue-scrollto', '~plugins/vue2-touch-events', '~plugins/observe-visibility'],
   /*
    ** Nuxt.js build-modules
    */

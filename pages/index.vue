@@ -2,10 +2,29 @@
   <div>
     <loading />
     <nav-menu />
-    <top id="top" />
-    <about id="about" :content="about" />
-    <members id="members" :content="members" />
-    <info id="info" :content="info" />
+    <top
+      id="top"
+      v-observe-visibility="visibilityTopChanged"
+      :class="{ active: isTopVisible, disable: !isTopVisible }"
+    />
+    <about
+      id="about"
+      :content="about"
+      v-observe-visibility="visibilityAboutChanged"
+      :class="{ active: isAboutVisible, disable: !isAboutVisible }"
+    />
+    <members
+      id="members"
+      :content="members"
+      v-observe-visibility="visibilityMemberChanged"
+      :class="{ active: isMemberVisible, disable: !isMemberVisible }"
+    />
+    <info
+      id="info"
+      :content="info"
+      v-observe-visibility="visibilityInfoChanged"
+      :class="{ active: isInfoVisible, disable: !isInfoVisible }"
+    />
     <foot />
   </div>
 </template>
@@ -24,8 +43,26 @@ export default {
   data: () => ({
     about: '',
     info: '',
-    members: ''
+    members: '',
+    isTopVisible: false,
+    isAboutVisible: false,
+    isMemberVisible: false,
+    isInfoVisible: false
   }),
+  methods: {
+    visibilityTopChanged(isVisible) {
+      this.isTopVisible = isVisible
+    },
+    visibilityAboutChanged(isVisible) {
+      this.isAboutVisible = isVisible
+    },
+    visibilityMemberChanged(isVisible) {
+      this.isMemberVisible = isVisible
+    },
+    visibilityInfoChanged(isVisible) {
+      this.isInfoVisible = isVisible
+    }
+  },
   async asyncData({ app }) {
     const about = await app.$axios.$get('content/about.md')
     const info = await app.$axios.$get('content/info.md')
@@ -70,4 +107,20 @@ body
   border-color transparent
   border-bottom-color #111
   content ' '
+
+.disable
+  visibility hidden
+
+.active
+  visibility visible
+  animation fadein 0.75s linear
+
+@keyframes fadein
+  from
+    opacity 0
+    transform translateY(60px)
+
+  to
+    opacity 1
+    transform translateY(0)
 </style>
