@@ -4,6 +4,8 @@
       <div class="members-bg-img"></div>
       <div class="members-bg-center"></div>
     </div>
+    <div class="writer-name">{{ content.member.writerName }}</div>
+    <div class="circle-name">{{ content.member.circleName }}</div>
     <div class="modal" :class="{ 'is-active': isOpen }">
       <div class="modal-background" @click="isOpen = false"></div>
       <div class="modal-content">
@@ -24,6 +26,8 @@
               "&nbsp;" +
               content.member.kanjiLevel1 +
               "&nbsp;" +
+              "足" +
+              "&nbsp;" +
               content.member.difficultyLevel1
           }}
         </div>
@@ -34,6 +38,8 @@
               content.member.musicName2 +
               "&nbsp;" +
               content.member.kanjiLevel2 +
+              "&nbsp;" +
+              "足" +
               "&nbsp;" +
               content.member.difficultyLevel2
           }}
@@ -64,8 +70,6 @@
         @click="isOpen = false"
       ></button>
     </div>
-    <div class="writer-name">{{ content.member.writerName }}</div>
-    <div class="circle-name">{{ content.member.circleName }}</div>
   </div>
 </template>
 
@@ -80,6 +84,7 @@ export default {
 
 <style lang="stylus" scoped>
 .members-bg
+  position relative
   width 100%
   height 100%
   border solid 1px #000
@@ -97,7 +102,7 @@ export default {
   background-position center center
   background-size 350%
   background-repeat no-repeat
-  animation rotate-anime 10s linear infinite
+  animation rotate-anime 5s linear infinite
 
 .members-bg-center
   position absolute
@@ -140,7 +145,7 @@ export default {
 
 .music
   color #fff
-  font-size 2rem
+  font-size 1.7rem
 
 .sns
   display flex

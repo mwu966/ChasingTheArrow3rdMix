@@ -64,6 +64,6 @@ export default {
   border-bottom solid 1px rgba(0, 0, 0, 0.25)
   background-image linear-gradient(135deg, #a79756, #faf8c5, #a79756)
 
-.navbar-item:focus
+.navbar-item:focus, .navbar-item:hover
   background rgba(0, 0, 0, 0.1)
 </style>

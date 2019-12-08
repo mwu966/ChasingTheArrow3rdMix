@@ -56,6 +56,7 @@ export default {
 .members-container
   display flex
   justify-content center
+  margin-bottom 10vh
 
 .arrow
   max-width 15vh
