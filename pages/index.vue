@@ -2,11 +2,7 @@
   <div>
     <loading />
     <nav-menu />
-    <top
-      id="top"
-      v-observe-visibility="visibilityTopChanged"
-      :class="{ active: isTopVisible, disable: !isTopVisible }"
-    />
+    <top id="top" />
     <about
       id="about"
       :content="about"
@@ -50,9 +46,6 @@ export default {
     isInfoVisible: false
   }),
   methods: {
-    visibilityTopChanged(isVisible) {
-      this.isTopVisible = isVisible
-    },
     visibilityAboutChanged(isVisible) {
       this.isAboutVisible = isVisible
     },
