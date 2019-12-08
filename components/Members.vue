@@ -4,26 +4,81 @@
       <h1 class="index">
         <span>Dancers</span>
       </h1>
-      <div
-        class="members-container"
-        v-touch:swipe.left="toLeft"
-        v-touch:swipe.right="toRight"
-      >
-        <div class="arrow left" @click="toLeft()"></div>
-        <transition-group
-          class="member-container"
-          tag="div"
-          :name="dancerChangeDirection ? 'dancer-left' : 'dancer-right'"
-        >
-          <member
-            class="member"
-            v-for="(member, index) in content.members"
-            v-show="index == activeIndex"
-            :key="member.twitterId"
-            :content="{ member }"
-          />
-        </transition-group>
-        <div class="arrow right" @click="toRight()"></div>
+      <div class="columns">
+        <div class="column is-one-fifth">
+          <div
+            class="dropdown is-hidden-tablet"
+            :class="{ 'is-active': memberDropDownIsActive }"
+          >
+            <div class="dropdown-trigger">
+              <div
+                class="dropdown-button"
+                aria-haspopup="true"
+                aria-controls="dropdown-menu"
+                @click="memberDropDownIsActive = !memberDropDownIsActive"
+              >
+                <span class="dropdown-is-close" v-show="!memberDropDownIsActive"
+                  >+</span
+                >
+                <span class="dropdown-is-open" v-show="memberDropDownIsActive"
+                  >-</span
+                >
+                <span>Dancer List</span>
+              </div>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+              <div class="dropdown-content">
+                <div
+                  v-for="(member, index) in content.members"
+                  :key="member.twitterId"
+                  :class="{
+                    'member-select-is-active-mobile': activeIndex == index
+                  }"
+                  @click="
+                    activeIndex = index;
+                    memberDropDownIsActive = false;
+                  "
+                >
+                  {{ member.writerName }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="is-hidden-mobile">
+            <li
+              v-for="(member, index) in content.members"
+              :key="member.twitterId"
+              class="member-select"
+              :class="{ 'member-select-is-active': activeIndex == index }"
+              @click="activeIndex = index"
+            >
+              {{ member.writerName }}
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <div
+            class="members-container"
+            v-touch:swipe.left="toLeft"
+            v-touch:swipe.right="toRight"
+          >
+            <div class="arrow left" @click="toLeft()"></div>
+            <transition-group
+              class="member-container"
+              tag="div"
+              :name="dancerChangeDirection ? 'dancer-left' : 'dancer-right'"
+            >
+              <member
+                class="member"
+                v-for="(member, index) in content.members"
+                v-show="index == activeIndex"
+                :key="member.twitterId"
+                :content="{ member }"
+              />
+            </transition-group>
+            <div class="arrow right" @click="toRight()"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -36,7 +91,8 @@ export default {
   props: ['content'],
   data: () => ({
     activeIndex: 0,
-    dancerChangeDirection: true
+    dancerChangeDirection: true,
+    memberDropDownIsActive: false
   }),
   methods: {
     toLeft: function() {
@@ -56,6 +112,34 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.member-select
+  cursor pointer
+
+.member-select:hover, .member-select:focus, .member-select-is-active
+  background-color rgba(0, 0, 0, 0.1)
+
+.member-select-is-active-mobile
+  background-color rgba(0, 0, 0, 0.3)
+
+.dropdown-button
+  display inline-block
+  padding 0.5em 1em
+  border-radius 3px
+  background-image linear-gradient(to right, #868f96 0%, #596164 100%)
+  color #FFF
+  text-decoration none
+  font-weight bold
+  transition 0.4s
+
+.dropdown-is-open, .dropdown-is-close
+  display inline-block
+  width 0.8em
+
+.dropdown-content
+  background-image linear-gradient(to right, #868f96 0%, #596164 100%)
+  color #fff
+  opacity 0.95
+
 .members-container
   display flex
   justify-content center
