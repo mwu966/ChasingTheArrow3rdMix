@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <h1 class="index">
-        <span>Dancers</span>
+        <span>Dancer List</span>
       </h1>
       <div class="columns">
         <div class="column is-one-fifth">
