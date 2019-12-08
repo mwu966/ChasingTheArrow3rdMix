@@ -156,14 +156,17 @@ export default {
   font-size 1.2rem
 
 .modal-writer-name
+  margin-left 0.5rem
   color #fff
   font-size 2.5rem
 
 .modal-circle-name
+  margin-left 0.5rem
   color #fff
   font-size 1.3rem
 
 .music
+  margin-left 0.5rem
   color #fff
   font-size 1.7rem
 
