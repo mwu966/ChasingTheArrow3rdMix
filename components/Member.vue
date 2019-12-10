@@ -4,10 +4,7 @@
       <div
         class="members-bg-img"
         :style="{
-          backgroundImage:
-            'url(' +
-            require('~/assets/img/members/' + content.member.imgName) +
-            ')'
+          backgroundImage: `url(${require(`~/assets/img/members/${content.member.imgName}`)})`
         }"
       ></div>
       <div class="members-bg-center"></div>
@@ -25,34 +22,26 @@
         </div>
         <p class="image">
           <img
-            :src="require('~/assets/img/members/' + content.member.imgName)"
+            :src="require(`~/assets/img/members/${content.member.imgName}`)"
             :alt="content.member.writerName"
           />
         </p>
         <div class="music">
           {{
-            content.member.playStyle1 +
-              "&nbsp;" +
-              content.member.musicName1 +
-              "&nbsp;" +
-              content.member.kanjiLevel1 +
-              "&nbsp;" +
-              "足" +
-              "&nbsp;" +
-              content.member.difficultyLevel1
+            `${content.member.playStyle1}&nbsp;
+            ${content.member.musicName1}&nbsp;
+            ${content.member.kanjiLevel1}&nbsp;
+            足&nbsp;
+            ${content.member.difficultyLevel1}`
           }}
         </div>
         <div class="music" v-if="content.member.playStyle2 != ''">
           {{
-            content.member.playStyle2 +
-              "&nbsp;" +
-              content.member.musicName2 +
-              "&nbsp;" +
-              content.member.kanjiLevel2 +
-              "&nbsp;" +
-              "足" +
-              "&nbsp;" +
-              content.member.difficultyLevel2
+            `${content.member.playStyle2}&nbsp;
+              ${content.member.musicName2}&nbsp;
+              ${content.member.kanjiLevel2}&nbsp;
+              足&nbsp;
+              ${content.member.difficultyLevel2}`
           }}
         </div>
         <div class="sns">
