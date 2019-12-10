@@ -109,7 +109,7 @@ export default {
   height 100%
   border-radius 50%
   background-position center center
-  background-size 350%
+  background-size cover
   background-repeat no-repeat
   animation rotate-anime 5s linear infinite
 
@@ -153,6 +153,13 @@ export default {
   margin-left 0.5rem
   color #fff
   font-size 1.3rem
+
+.modal-content
+  width auto
+
+.image img
+  max-height 60vh
+  width auto
 
 .music
   margin-left 0.5rem
