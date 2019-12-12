@@ -67,7 +67,8 @@ export default {
 <style lang="stylus" scoped>
 .navbar, .navbar-menu
   border-bottom solid 1px rgba(0, 0, 0, 0.25)
-  background-image linear-gradient(135deg, #a79756, #faf8c5, #a79756)
+  background-image linear-gradient(135deg, #A48402, #FFF791, #A48402)
+  opacity 0.9
 
 .navbar-item:focus, .navbar-item:hover
   background rgba(0, 0, 0, 0.1)

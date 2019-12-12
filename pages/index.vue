@@ -71,7 +71,10 @@ export default {
 
 <style lang="stylus">
 html
-  background-image linear-gradient(135deg, #a79756, #faf8c5, #a79756)
+  background-image url('~assets/img/top/goldenback.png')
+  background-attachment fixed
+  background-size cover
+  background-repeat no-repeat
 
 body
   font-family 'Gentium Book Basic', 'Sawarabi Gothic', sans-serif
