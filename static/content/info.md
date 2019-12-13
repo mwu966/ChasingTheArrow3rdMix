@@ -12,10 +12,12 @@ A5 本文モノクロ 124P
 ### 頒布価格
 
 #### 会場価格
+
 1,500 円
 
 #### 通販価格
-1,600円
+
+1,600 円
 
 ### 頒布イベント
 
@@ -32,3 +34,8 @@ A5 本文モノクロ 124P
 ### 企画･制作
 
 ミルク蒼屋/Colloid
+
+### 既刊
+
+[![1stMix](http://ddrcoterie.cyane.info/img/1stlink.png)](http://ddrcoterie.cyane.info/1stMix.html)
+[![2ndMix](http://ddrcoterie.cyane.info/img/2ndlink.png)](http://ddrcoterie.cyane.info/)

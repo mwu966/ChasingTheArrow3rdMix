@@ -26,13 +26,13 @@
           Top
         </nuxt-link>
         <nuxt-link class="navbar-item" v-scroll-to="'#about'" to>
-          About
+          About this book
         </nuxt-link>
         <nuxt-link class="navbar-item" v-scroll-to="'#members'" to>
           Dancer List
         </nuxt-link>
         <nuxt-link class="navbar-item" v-scroll-to="'#info'" to>
-          Info
+          Information
         </nuxt-link>
       </div>
 

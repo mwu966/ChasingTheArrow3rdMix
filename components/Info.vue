@@ -22,4 +22,29 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+/deep/
+  p
+    font-size 1.1rem
+
+  h4
+    position relative
+    display inline-block
+    padding 0 2.5em
+    text-align center
+
+  h4:before, h4:after
+    position absolute
+    top 50%
+    display inline-block
+    width 15%
+    height 1px
+    background-color #363636
+    content ''
+
+  h4:before
+    left 0
+
+  h4:after
+    right 0
+</style>
