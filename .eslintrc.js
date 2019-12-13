@@ -1,17 +1,23 @@
 module.exports = {
-  root: true,
   env: {
+    node: true,
     browser: true,
-    node: true
+    es6: true
+  },
+  extends: ["eslint:recommended", "plugin:vue/essential"],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly"
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    ecmaVersion: 2018,
+    sourceType: "module"
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended'
-  ],
-  plugins: ['vue'],
-  rules: {}
+  plugins: ["vue"],
+  rules: {
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "single"],
+    semi: ["error", "never"]
+  }
 };
