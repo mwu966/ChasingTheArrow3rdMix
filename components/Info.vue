@@ -27,6 +27,19 @@ export default {
   p
     font-size 1.1rem
 
+  h3
+    position relative
+    padding 0.5em
+
+  h3:after
+    position absolute
+    bottom 0
+    left 0
+    width 100%
+    height 2px
+    background linear-gradient(to right, #44155A, rgba(255, 255, 255, 0) 100%)
+    content ''
+
   h4
     position relative
     display inline-block
