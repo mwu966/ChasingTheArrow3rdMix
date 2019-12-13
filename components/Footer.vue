@@ -1,14 +1,14 @@
 <template>
   <footer class="footer">
-    <div class="modal" id="privacy-policy">
-      <div class="modal-background" @click="closePrivacyPolicy"></div>
+    <div class="modal" id="privacy-policy" :class="{ 'is-active': isOpen }">
+      <div class="modal-background" @click="isOpen = false"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">プライバシーポリシー</p>
           <button
             class="delete"
             aria-label="close"
-            @click="closePrivacyPolicy"
+            @click="isOpen = false"
           ></button>
         </header>
         <section class="modal-card-body">
@@ -57,27 +57,27 @@
           </div>
         </section>
         <footer class="modal-card-foot">
-          <button class="button" @click="closePrivacyPolicy">Close</button>
+          <button class="button" @click="isOpen = false">Close</button>
         </footer>
       </div>
     </div>
     <div class="content has-text-centered">
       <p>&copy; 2019 ミルク蒼屋</p>
-      <a @click="openPrivacyPolicy">プライバシポリシー</a>
+      <p class="notice">
+        当合同誌は&#12849;コナミアミューズメント様制作の Dance Dance Revolution
+        の二次創作、ファン有志による作品です。
+        公式・企業とは一切関係ありません。<br />
+        <a @click="isOpen = true">プライバシポリシー </a>
+      </p>
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-  methods: {
-    openPrivacyPolicy() {
-      document.getElementById('privacy-policy').classList.add('is-active')
-    },
-    closePrivacyPolicy() {
-      document.getElementById('privacy-policy').classList.remove('is-active')
-    }
-  }
+  data: () => ({
+    isOpen: false
+  })
 }
 </script>
 
@@ -91,4 +91,11 @@ export default {
 
 .is-active
   animation show 0.1s linear 0s
+
+.footer
+  border-top solid 1px rgba(0, 0, 0, 0.25)
+  background none
+
+.notice
+  font-size 0.8rem
 </style>

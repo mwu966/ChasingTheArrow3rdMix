@@ -1,6 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
+      <h1 class="index">
+        <span>About this book</span>
+      </h1>
       <div class="content" v-html="content" />
     </div>
   </section>
@@ -13,6 +16,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/deep/ h1, /deep/ p
-  font-family 'Josefin Sans', sans-serif
+/deep/ p
+  font-size 1.6em
+  line-height 3rem
+
+  strong
+    font-size 2.2rem
+    line-height 3.6rem
 </style>

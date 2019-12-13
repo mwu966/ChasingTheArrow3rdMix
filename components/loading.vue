@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class="loading-page">
+  <div v-show="loading" class="loading-page">
     <trinity-rings-spinner
       :animation-duration="1500"
       :size="82"
@@ -15,15 +15,12 @@ export default {
     TrinityRingsSpinner
   },
   data: () => ({
-    loading: false
+    loading: true
   }),
-  methods: {
-    start() {
-      this.loading = true
-    },
-    finish() {
+  mounted() {
+    setTimeout(() => {
       this.loading = false
-    }
+    }, 2000)
   }
 }
 </script>
@@ -31,7 +28,8 @@ export default {
 <style lang="stylus" scoped>
 .loading-page
   position fixed
-  z-index 3
+  top 0
+  z-index 40
   display flex
   justify-content center
   align-items center
