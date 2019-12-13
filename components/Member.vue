@@ -14,6 +14,12 @@
     <div class="modal" :class="{ 'is-active': isOpen }">
       <div class="modal-background" @click="modalClose"></div>
       <div class="modal-content">
+        <div
+          class="modal-circle-name"
+          v-show="content.member.writerName == 'Colloid'"
+        >
+          主催
+        </div>
         <div class="modal-writer-name">
           {{ content.member.writerName }}
         </div>
