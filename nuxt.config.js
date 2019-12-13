@@ -76,7 +76,10 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
     'nuxt-webfontloader',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-35724380-1'
+    }]
   ],
   axios: {
   },
