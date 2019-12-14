@@ -62,7 +62,6 @@
       </div>
     </div>
     <div class="content has-text-centered">
-      <p>&copy; 2019 ミルク蒼屋</p>
       <p class="notice">
         当合同誌は&#12849;コナミアミューズメント様制作の Dance Dance Revolution
         の二次創作、ファン有志による作品です。
