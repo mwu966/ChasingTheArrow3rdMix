@@ -27,9 +27,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.64.0'
       - name: Install dependencies
         run: npm install
-      - run: npm run build
       - run: npm run generate
 
       - name: deploy
