@@ -90,6 +90,9 @@ export default {
   router: {
     base: '/ChasingTheArrow3rdMix/'
   },
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://mwu966.github.io/ChasingTheArrow3rdMix/'
+  },
   /*
    ** Build configuration
    */
