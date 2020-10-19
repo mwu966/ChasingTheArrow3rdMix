@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import Loading from '~/components/Loading.vue'
 import Top from '~/components/Top.vue'
 import NavMenu from '~/components/NavMenu.vue'
 import About from '~/components/About.vue'
@@ -34,6 +33,7 @@ import Members from '~/components/Members.vue'
 import Info from '~/components/Info.vue'
 import Foot from '~/components/Footer.vue'
 import marked from 'marked'
+import Loading from '~/components/Loading.vue'
 export default {
   components: { Loading, Top, NavMenu, About, Members, Info, Foot },
   data: () => ({
