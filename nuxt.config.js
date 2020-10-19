@@ -91,6 +91,7 @@ export default {
    ** Build configuration
    */
   build: {
+    publicPath: '/static/',
     postcss: {
       preset: {
         features: {
