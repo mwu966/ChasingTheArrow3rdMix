@@ -87,6 +87,9 @@ export default {
       families: ['Gentium+Book+Basic','Sawarabi+Gothic']
     }
   },
+  router: {
+    base: '/ChasingTheArrow3rdMix/'
+  },
   /*
    ** Build configuration
    */
