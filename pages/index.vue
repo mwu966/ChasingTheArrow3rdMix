@@ -1,6 +1,5 @@
 <template>
   <div>
-    <loading />
     <nav-menu />
     <top id="top" />
     <about
