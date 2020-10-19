@@ -37,5 +37,5 @@ A5 本文モノクロ 124P
 
 ### 既刊
 
-[![1stMix](http://ddrcoterie.cyane.info/img/1stlink.png)](http://ddrcoterie.cyane.info/1stMix.html)
-[![2ndMix](http://ddrcoterie.cyane.info/img/2ndlink.png)](http://ddrcoterie.cyane.info/2ndMix.html)
+[![1stMix](http://ddrcoterie.cyane.info/img/1stlink.png)](http://localhost:3000/1stMix.html)
+[![2ndMix](http://ddrcoterie.cyane.info/img/2ndlink.png)](http://localhost:3000/2ndMix.html)
