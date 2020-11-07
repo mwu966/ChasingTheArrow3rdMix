@@ -31,6 +31,10 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.64.0'
+      - name: Create env
+        run: touch .env
+      - run: echo API_URL=${{ secrets.API_URL }} >> .env
+        
       - name: Install dependencies
         run: npm install
       - run: npm run generate
